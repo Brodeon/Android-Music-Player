@@ -9,7 +9,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            style="@style/Widget.MusicPlayer.Menubutton"
             android:text="Tracks"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -17,11 +17,10 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/albums_button"
             app:layout_constraintEnd_toEndOf="@+id/albums_button"
-            app:layout_constraintStart_toStartOf="@+id/albums_button" app:cornerRadius="20dp"
-            app:strokeColor="@color/colorAccent" app:rippleColor="@color/design_default_color_secondary"/>
+            app:layout_constraintStart_toStartOf="@+id/albums_button"/>
 
     <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            style="@style/Widget.MusicPlayer.Menubutton"
             android:text="Albums"
             android:layout_width="162dp"
             android:layout_height="wrap_content"
@@ -29,11 +28,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp" app:cornerRadius="20dp"
-            app:strokeColor="@color/colorAccent" app:rippleColor="@color/design_default_color_primary"/>
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
 
     <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            style="@style/Widget.MusicPlayer.Menubutton"
             android:text="Artists"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -41,7 +39,6 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/albums_button"
             app:layout_constraintStart_toStartOf="@+id/albums_button"
-            app:layout_constraintEnd_toEndOf="@+id/albums_button" app:cornerRadius="20dp"
-            app:strokeColor="@color/colorAccent"/>
+            app:layout_constraintEnd_toEndOf="@+id/albums_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

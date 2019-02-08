@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
         playBar = play_bar
         playBar.visibility = View.GONE
         playPauseBtn = play_pause_btn

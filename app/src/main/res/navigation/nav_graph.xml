@@ -6,13 +6,15 @@
 
     <fragment android:id="@+id/mainMenuFragment" android:name="com.brodeon.musicplayer.MainMenuFragment"
               android:label="fragment_main_menu" tools:layout="@layout/fragment_main_menu">
-        <action android:id="@+id/to_list_fragment" app:destination="@id/listFragment"/>
-        <action android:id="@+id/to_music_details_1"
+        <action android:id="@+id/to_list_fragment" app:destination="@id/listFragment"
+                app:enterAnim="@anim/nav_default_pop_enter_anim" app:exitAnim="@anim/nav_default_pop_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action android:id="@+id/to_music_details"
                 app:destination="@id/musicDetailsFragment"/>
     </fragment>
     <fragment android:id="@+id/listFragment" android:name="com.brodeon.musicplayer.ListFragment"
               android:label="fragment_list" tools:layout="@layout/fragment_list">
-        <action android:id="@+id/to_music_details_2"
+        <action android:id="@+id/to_music_details"
                 app:destination="@id/musicDetailsFragment"/>
     </fragment>
     <fragment android:id="@+id/musicDetailsFragment" android:name="com.brodeon.musicplayer.MusicDetailsFragment"
