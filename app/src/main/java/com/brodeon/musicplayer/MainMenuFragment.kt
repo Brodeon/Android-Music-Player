@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.navigation.Navigation
-import com.brodeon.musicplayer.R.id.to_list_fragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_main_menu.*
 
@@ -34,17 +33,17 @@ class MainMenuFragment : Fragment() {
     private fun setButtonsListeners() {
         val tracksButton = tracks_button
         tracksButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(to_list_fragment)
+            Navigation.findNavController(it).navigate(R.id.to_list_fragment)
         }
 
         val artistsButton = artists_button
         artistsButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(to_list_fragment)
+            Navigation.findNavController(it).navigate(R.id.musicDetailsFragment)
         }
 
         val albumsButton = albums_button
         albumsButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(to_list_fragment)
+            Navigation.findNavController(it).navigate(R.id.to_list_fragment)
         }
     }
 

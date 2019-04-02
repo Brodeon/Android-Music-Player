@@ -1,6 +1,5 @@
 package com.brodeon.musicplayer
 
-import android.app.IntentService
 import android.app.Service
 import android.content.Intent
 import android.media.AudioAttributes
@@ -9,7 +8,6 @@ import android.net.Uri
 import android.os.IBinder
 import android.os.Process
 import java.lang.Exception
-import java.net.URI
 
 class MusicService: Service() {
 
@@ -29,9 +27,14 @@ class MusicService: Service() {
             }
         }
 
-        override fun playSong(uri: String?) {
+        override fun playSong(uri: String, artist: String, title: String) {
             playSongOnInitialize(null, uri)
+            setTitleAndArtist(artist, title)
         }
+
+        override fun getDuration(): Int = player.duration
+        override fun getCurrentPosition(): Int = player.currentPosition
+        override fun setNewPosition(position: Int) = player.seekTo(position)
     }
 
     private var title: String? = null
@@ -40,6 +43,11 @@ class MusicService: Service() {
     override fun onBind(intent: Intent?): IBinder? {
         playSongOnInitialize(intent)
         return binder
+    }
+
+    private fun setTitleAndArtist(artist: String, title: String) {
+        this.artist = artist
+        this.title = title
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
